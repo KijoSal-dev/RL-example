@@ -1,0 +1,16 @@
+The output you're seeing is the result of the Q-learning algorithm training on the FrozenLake environment.
+
+Here's a breakdown:
+
+    Trained Q-table: This is the core output of the Q-learning process. It's a table where:
+        The rows represent the different states in the FrozenLake environment (there are 16 states in total, corresponding to the grid cells).
+        The columns represent the possible actions the agent can take from each state (usually 4 actions: left, down, right, up).
+        Each value in the table, Q(s, a), represents the estimated maximum future reward the agent can expect to receive by taking action a from state s, and then following the optimal policy thereafter.
+
+    Higher values in the Q-table indicate more favorable state-action pairs. The agent learns to choose the action with the highest Q-value for a given state when exploiting its knowledge.
+
+    Total reward earned during test: This value represents the sum of rewards the agent received during the final testing phase (after training). In the FrozenLake environment, the agent receives a reward of 1.0 only when it reaches the goal state (the 'G' cell) and 0.0 otherwise.
+
+    A Total reward earned during test of 1.0 means that during the test episode, the trained agent successfully navigated from the starting state ('S') to the goal state ('G'). This indicates that the Q-learning process was successful in training the agent to find a path to the goal in the deterministic (non-slippery) FrozenLake environment.
+
+In summary, the output shows that the agent has learned a policy (represented by the Q-table) that allows it to successfully reach the goal in the FrozenLake environment, resulting in a total reward of 1.0 during testing.
